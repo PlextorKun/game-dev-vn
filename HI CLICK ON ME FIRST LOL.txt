@@ -1,0 +1,17 @@
+yo whats up
+
+
+what i have rn is basically the entire conversation part of the game. I haven't added decision weights to create the story tree/outcome yet, but I can do that later and it wont take too long
+
+other than waiting for assets from the art team, I think the main thing that we have left to do is 
+
+a) change the appearance of the text boxes to whatever you want lmao and
+
+b) actually build the dressup part which is def the hardest section for sure.
+
+regardless, I learned the basics of what I just did off that one yt video I found earlier and it was p helpful so if you have any questions lmk
+
+also I comment my code a lot so hopefully what I did makes sense. the one thing that's kinda wierd is that all of my code is under the sprites label which is a bit shit organization-wise so I just need to fix that later lol
+
+
+gl!
