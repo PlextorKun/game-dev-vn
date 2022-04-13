@@ -1,40 +1,88 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 16, in script
-    "Narrator" "Who would you like to date?"
-  File "renpy/common/00library.rpy", line 268, in say
-    who(what, interact=interact, *args, **kwargs)
-TypeError: Fade() takes at least 3 arguments (3 given)
+Exception: Could not find font u'fonts/fontexample.ttf'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 16, in script
-    "Narrator" "Who would you like to date?"
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 721, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 1417, in say
-    renpy.store.say(who, what, *args, **kwargs)
-  File "renpy/common/00library.rpy", line 268, in say
-    who(what, interact=interact, *args, **kwargs)
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 1249, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 901, in do_display
-    **display_args)
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 647, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/common/_layout/screen_load_save.rpym", line 35, in script
+    $ ui.interact()
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_load_save.rpym", line 35, in <module>
+    $ ui.interact()
   File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3676, in interact_core
-    new_widget=layers_root)
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/curry.py", line 48, in __call__
-    return self.callable(*(self.args + args), **merged_kwargs)
-TypeError: Fade() takes at least 3 arguments (3 given)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3839, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 2565, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/transition.py", line 183, in render
+    surf = renpy.display.render.render(trans, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/transition.py", line 360, in render
+    return render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 688, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1264, in render
+    st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1029, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 987, in render
+    surf = render(d, rw, height - y, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 795, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1264, in render
+    st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/text/text.py", line 2096, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/text/text.py", line 639, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/text/text.py", line 248, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/text/font.py", line 702, in get_font
+    face = load_face(fn)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/text/font.py", line 643, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font u'fonts/fontexample.ttf'.
 
 Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
 Date Night Dress Up 1.0
-Tue Apr 12 20:53:06 2022
+Tue Apr 12 23:15:49 2022

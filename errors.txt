@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 138: style property xzoom is not known.
-    xzoom 0.5 
-         ^
+File "game/screens.rpy", line 537: style property idle is not known.
+    idle u'#ffffff'
+        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Tue Apr 12 18:54:55 2022
+Tue Apr 12 23:29:51 2022
