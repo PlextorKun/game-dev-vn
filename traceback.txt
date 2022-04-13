@@ -1,22 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 272, in script
-    jump label_owen_dessert
-ScriptError: could not find label 'label_owen_dessert'.
+  File "game/script.rpy", line 16, in script
+    "Narrator" "Who would you like to date?"
+  File "renpy/common/00library.rpy", line 268, in say
+    who(what, interact=interact, *args, **kwargs)
+TypeError: Fade() takes at least 3 arguments (3 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 272, in script
-    jump label_owen_dessert
-  File "renpy/ast.py", line 1757, in execute
-    rv = renpy.game.script.lookup(target)
-  File "renpy/script.py", line 918, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'label_owen_dessert'.
+  File "game/script.rpy", line 16, in script
+    "Narrator" "Who would you like to date?"
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 721, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 1417, in say
+    renpy.store.say(who, what, *args, **kwargs)
+  File "renpy/common/00library.rpy", line 268, in say
+    who(what, interact=interact, *args, **kwargs)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 1249, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 901, in do_display
+    **display_args)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 647, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3676, in interact_core
+    new_widget=layers_root)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/curry.py", line 48, in __call__
+    return self.callable(*(self.args + args), **merged_kwargs)
+TypeError: Fade() takes at least 3 arguments (3 given)
 
-Windows-10-10.0.19041
+Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
 Date Night Dress Up 1.0
-Sun Apr 10 19:12:17 2022
+Tue Apr 12 20:53:06 2022

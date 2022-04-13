@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 254: expected statement.
-    label_owen_sports:
-                     ^
-
-File "game/script.rpy", line 279: expected statement.
-    label_owen_dessert:
-                      ^
+File "game/screens.rpy", line 138: style property xzoom is not known.
+    xzoom 0.5 
+         ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sun Apr 10 19:10:29 2022
+Tue Apr 12 18:54:55 2022

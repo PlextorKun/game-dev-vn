@@ -13,7 +13,7 @@ define Owen = Character("Owen")
 # NOTE: RANDOMIZE MCQ OPTIONS BC THEY ARE CURRENTLY ORDERED BAD, GOOD, OK
 
 label start: # TESTER
-    "Narrator" "Who would you like to date?"
+    "BFF" "Who would you like to date?"
     scene bg black
     menu:
         "Brad":

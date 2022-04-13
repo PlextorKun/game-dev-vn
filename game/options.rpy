@@ -73,23 +73,23 @@ define config.has_voice = True
 
 ## Entering or exiting the game menu.
 
-define config.enter_transition = dissolve
-define config.exit_transition = dissolve
+define config.enter_transition = Fade(0.5, 0.2, 0.5)
+define config.exit_transition = Fade(0.5, 0.2, 0.5)
 
 
 ## Between screens of the game menu.
 
-define config.intra_transition = dissolve
+define config.intra_transition = Fade(0.2, 0.0, 0.2)
 
 
 ## A transition that is used after a game has been loaded.
 
-define config.after_load_transition = None
+define config.after_load_transition = Fade(0.5, 0.2, 0.5)
 
 
 ## Used when entering the main menu after the game has ended.
 
-define config.end_game_transition = None
+define config.end_game_transition = Fade(0.5, 0.2, 0.5)
 
 
 ## A variable to set the transition used when the game starts does not exist.
@@ -111,8 +111,8 @@ define config.window = "auto"
 
 ## Transitions used to show and hide the dialogue window
 
-define config.window_show_transition = Dissolve(.2)
-define config.window_hide_transition = Dissolve(.2)
+define config.window_show_transition = Fade(0.2, 0.0, 0.2)
+define config.window_hide_transition = Fade(0.2, 0.0, 0.2)
 
 
 ## Preference defaults #########################################################
