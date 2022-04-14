@@ -26,14 +26,14 @@ init python:
 define gui.accent_color = u'#8D66BB'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = u'#000000'
+define gui.idle_color = u'#ffffff'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
 define gui.idle_small_color = u'#aaaaaa'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = u'#9a23db'
+define gui.hover_color = u'#e8cff5'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
@@ -61,7 +61,7 @@ define gui.text_font = "fonts/RobotoMono-Light.ttf"
 define gui.name_text_font = "fonts/RobotoMono-Medium.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "fonts/RobotoMono-Regular.ttf"
+define gui.interface_text_font = "fonts/RobotoMono-Light.ttf"
 
 ## font for the title
 define gui.title_text_font = "fonts/THE MEZIRANE.ttf"
@@ -88,7 +88,7 @@ define gui.title_text_size = 100
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_background = "images/backgrounds/bg restaurant.png"
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -98,7 +98,7 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 250
+define gui.textbox_height = 215
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
@@ -186,7 +186,6 @@ define gui.radio_button_borders = Borders(18, 4, 4, 4)
 define gui.check_button_borders = Borders(18, 4, 4, 4)
 
 define gui.confirm_button_text_xalign = 0.5
-define gui.confirm_button_text_idle_color = u'#ffffff'
 
 define gui.page_button_borders = Borders(10, 4, 10, 4)
 

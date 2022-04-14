@@ -495,7 +495,7 @@ style game_menu_label is gui_label
 style game_menu_label_text is gui_label_text
 
 style return_button is navigation_button
-#style return_button_text is navigation_button_text
+style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:
     bottom_padding 30
@@ -535,11 +535,6 @@ style return_button:
     yalign 1.0
     yoffset -30
 
-style return_button_text:
-    idle_color u'#ffffff'
-
-style navigation_button_text:
-    idle_color u'#ffffff'
 
 ## About screen ################################################################
 ##
