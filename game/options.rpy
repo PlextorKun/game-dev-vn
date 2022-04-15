@@ -30,6 +30,8 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+    A game about hearbreak and how much I hate renpy and would take js any day.
+    It is also about the trials and woes of a group project....
 """)
 
 

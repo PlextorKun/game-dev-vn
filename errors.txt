@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 537: style property idle is not known.
-    idle u'#ffffff'
-        ^
+File "game/screens.rpy", line 630: end of line expected.
+    align .5, .5
+            ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Tue Apr 12 23:29:51 2022
+Thu Apr 14 17:31:50 2022
