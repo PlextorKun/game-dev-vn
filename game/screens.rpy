@@ -470,8 +470,25 @@ screen game_menu(title, scroll=None, yinitial=0.0):
                 else:
 
                     transclude
+    vbox:
+        xpos 20
+        yalign 0.5
 
-    use navigation
+        spacing gui.navigation_spacing
+        textbutton _("History") action ShowMenu("history"):
+            style "opt_button"
+
+        textbutton _("Save") action ShowMenu("save"):
+            style "opt_button"
+
+        textbutton _("Load") action ShowMenu("load"):
+            style "opt_button"
+
+        textbutton _("Preferences") action ShowMenu("preferences"):
+            style "opt_button"
+
+        textbutton _("Main Menu") action MainMenu():
+            style "opt_button"
 
     textbutton _("Return"):
         style "return_button"
@@ -495,7 +512,7 @@ style game_menu_label is gui_label
 style game_menu_label_text is gui_label_text
 
 style return_button is navigation_button
-style return_button_text is navigation_button_text
+#style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:
     bottom_padding 30
@@ -522,7 +539,7 @@ style game_menu_side:
     spacing 10
 
 style game_menu_label:
-    xpos 50
+    xpos 10
     ysize 120
 
 style game_menu_label_text:
@@ -535,6 +552,13 @@ style return_button:
     yalign 1.0
     yoffset -30
 
+style return_button_text:
+    idle_color u'#ffffff'
+
+style opt_button_text:
+    idle_color u'#ffffff'
+    selected_color u'#6a6a6a'
+    insensitive_color u'#8888887f'
 
 ## About screen ################################################################
 ##
@@ -546,32 +570,74 @@ style return_button:
 screen about():
 
     tag menu
-
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
+    #use game_menu(_("About"), scroll="viewport"):
+    # add "gui/overlay/game_menu.png"
 
-        style_prefix "about"
+    frame:
+        style "about_overlay_frame"
 
-        vbox:
+        viewport:
+            yinitial 0.0
+            scrollbars "vertical"
+            mousewheel True
+            draggable True
+            pagekeys True
 
-            label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            side_yfill True
+            vbox:
+                spacing 10
 
-            ## gui.about is usually set in options.rpy.
-            if gui.about:
-                text "[gui.about!t]\n"
+                style_prefix "about"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+                label "About [config.name!t]"
+                # text _("Version [config.version!t]\n")
+
+                ## gui.about is usually set in options.rpy.
+                if gui.about:
+                    text "[gui.about!t]\n"
+
+                text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+
+                textbutton _("Return"):
+                    style "a_return_button"
+
+                    action Return()
+                if main_menu:
+                    key "game_menu" action ShowMenu("main_menu")
 
 
 style about_label is gui_label
 style about_label_text is gui_label_text
 style about_text is gui_text
 
+style about_outer_frame:
+    bottom_padding 30
+    left_padding 30
+    background "gui/overlay/game_menu.png"
+
+style a_title:
+    properties gui.text_properties("title")
+
 style about_label_text:
     size gui.label_text_size
+
+style about_overlay_frame:
+    xsize 1200
+    yfill True
+    xalign 0.5
+    yalign 0.5
+    background "gui/overlay/game_menu.png"
+
+style a_return_button:
+    xpos 20
+    yalign 1.0
+    yoffset -30
+
+style a_return_button_text:
+    idle_color u'#ffffff'
 
 
 ## Load and Save screens #######################################################
@@ -697,6 +763,9 @@ style page_button:
 
 style page_button_text:
     properties gui.button_text_properties("page_button")
+    idle_color u'#ffffff'
+    selected_color u'#6a6a6a'
+    insensitive_color u'#8888887f'
 
 style slot_button:
     properties gui.button_properties("slot_button")
