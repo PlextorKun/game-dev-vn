@@ -49,3 +49,62 @@ Version: '4.6.0 - Build 27.20.100.8682'
 Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(2648, 1490) drawable=(2648, 1490)
 Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 222.98s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.03s
+Loading script took 0.31s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/gui.rpy", line 36: expected statement.
+    <<<<<<< Updated upstream
+                            ^
+
+File "game/gui.rpy", line 37: expected statement.
+    <<<<<<< Updated upstream
+                            ^
+
+File "game/gui.rpy", line 39: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 41: expected statement.
+    >>>>>>> Stashed changes
+                           ^
+
+File "game/gui.rpy", line 42: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 44: expected statement.
+    >>>>>>> Stashed changes
+                           ^
+
+File "game/screens.rpy", line 637: expected statement.
+    <<<<<<< Updated upstream
+                            ^
+
+File "game/screens.rpy", line 639: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 641: expected statement.
+    >>>>>>> Stashed changes
+                           ^
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: 'Initialize() = -6.' (can be ignored)
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3000, 2000)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.8682'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2648, 1490) drawable=(2648, 1490)
+Maximum texture size: 4096x4096

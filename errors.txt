@@ -6,11 +6,23 @@ File "game/gui.rpy", line 36: expected statement.
     <<<<<<< Updated upstream
                             ^
 
-File "game/gui.rpy", line 38: expected statement.
+File "game/gui.rpy", line 37: expected statement.
+    <<<<<<< Updated upstream
+                            ^
+
+File "game/gui.rpy", line 39: expected statement.
     =======
           ^
 
-File "game/gui.rpy", line 40: expected statement.
+File "game/gui.rpy", line 41: expected statement.
+    >>>>>>> Stashed changes
+                           ^
+
+File "game/gui.rpy", line 42: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 44: expected statement.
     >>>>>>> Stashed changes
                            ^
 
@@ -27,4 +39,4 @@ File "game/screens.rpy", line 641: expected statement.
                            ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Thu Apr 14 17:52:30 2022
+Thu Apr 14 17:56:13 2022
