@@ -95,6 +95,53 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
+
+
+default mtop = 0
+
+screen dressup():
+    tag menu
+    # add "dressup bg"
+    add "base" at items
+
+    textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
+        text_size 36
+        text_color "#fff"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    textbutton "x" action SetVariable("mtop", 0) xalign 0.90 yalign 0.125:
+        text_size 24
+        text_color "#d5dee8"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    textbutton "Ready!" action SetVariable("mtop", 0) xalign 0.90 yalign 0.325:
+        text_size 24
+        text_color "#d5dee8"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    ## If you're using the if statements for the images
+    # if mtop == 1:
+    #     add "fit brad" at items
+    # elif mtop == 2:
+    #     add "fit fish" at items
+    # elif mtop == 3:
+    #     add "fit owen" at items
+
+    ## If you're using the format option for showing images- NOTE: don't use both the if
+    ## statement above and this!
+    add "top{}".format(mtop)
+
+
+
+
+
+
+
+
+
 screen say(who, what):
     style_prefix "say"
 

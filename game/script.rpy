@@ -14,12 +14,16 @@ define Taylor = Character("Taylor")
 # NOTE: CAN ADD WEIGHTS TO PLAYER CHOICES TO DETERMINE IF FINAL ENDING IS GOOD, BAD, OR NETURAL
 # NOTE: RANDOMIZE MCQ OPTIONS BC THEY ARE CURRENTLY ORDERED BAD, GOOD, OK
 
+transform items:
+    xalign 0.0
+    yalign 0.05
+
 label start: # TESTER
     "BFF" "Who would you like to date?"
     scene bg black
     menu:
         "Brad":
-            jump brad
+            jump brad_dressup
         "Gold":
             jump gold
         "Owen":
@@ -35,6 +39,17 @@ label start: # TESTER
     # Gold "blub..."
     # # show gold happy GOLD TOO LARGER
     # Owen "Now that's outfit's a hit!"
+
+label brad_dressup:
+    transform items:
+        xalign 0.0
+        yalign 0.05
+
+    # call screen dressup
+    jump brad
+
+
+
 
 label characters:
     # BRADLEY CHARACTER ARC

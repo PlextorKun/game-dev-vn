@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 537: style property idle is not known.
-    idle u'#ffffff'
-        ^
+File "game/script.rpy", line 48: expected statement.
+    ui.callsinnewcontext(dressup)
+                                 ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Tue Apr 12 23:29:51 2022
+Mon Apr 18 18:25:30 2022
