@@ -88,7 +88,7 @@ define gui.title_text_size = 100
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "images/backgrounds/bg restaurant.png"
+define gui.main_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -98,7 +98,7 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 215
+define gui.textbox_height = 220
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
@@ -131,11 +131,11 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 420
+define gui.dialogue_xpos = 0.5
 define gui.dialogue_ypos = 0
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 900
+define gui.dialogue_width = 1000
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.

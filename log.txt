@@ -1,43 +1,40 @@
-Thu Apr 14 17:52:29 2022
+Tue Apr 19 18:28:22 2022
 Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
  
 
-Bootstrap to the start of init.init took 0.12s
+Bootstrap to the start of init.init took 0.18s
 Early init took 0.01s
-Loader init took 0.09s
-Loading error handling took 0.07s
-Loading script took 0.64s
-Loading save slot metadata. took 0.02s
+Loader init took 0.05s
+Loading error handling took 0.05s
+Loading script took 0.32s
+Loading save slot metadata. took 0.06s
 Loading persistent took 0.00s
-
-File "game/gui.rpy", line 36: expected statement.
-    <<<<<<< Updated upstream
-                            ^
-
-File "game/gui.rpy", line 38: expected statement.
-    =======
-          ^
-
-File "game/gui.rpy", line 40: expected statement.
-    >>>>>>> Stashed changes
-                           ^
-
-File "game/screens.rpy", line 637: expected statement.
-    <<<<<<< Updated upstream
-                            ^
-
-File "game/screens.rpy", line 639: expected statement.
-    =======
-          ^
-
-File "game/screens.rpy", line 641: expected statement.
-    >>>>>>> Stashed changes
-                           ^
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.13s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Dump and make backups. took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
 DPI scale factor: 2.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: 'Initialize() = -6.' (can be ignored)
-Interface start took 0.40s
+Creating interface object took 0.02s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.20s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3000, 2000)
@@ -47,55 +44,40 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.8682'
 Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(2648, 1490) drawable=(2648, 1490)
+Screen sizes: virtual=(1280, 720) physical=(2560, 1440) drawable=(2560, 1440)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 222.98s
+Bootstrap to the start of init.init took 13587.17s
 Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.03s
-Loading script took 0.31s
-Loading save slot metadata. took 0.02s
+Loader init took 0.05s
+Loading error handling took 0.05s
+Loading script took 0.33s
+Loading save slot metadata. took 0.06s
 Loading persistent took 0.00s
-
-File "game/gui.rpy", line 36: expected statement.
-    <<<<<<< Updated upstream
-                            ^
-
-File "game/gui.rpy", line 37: expected statement.
-    <<<<<<< Updated upstream
-                            ^
-
-File "game/gui.rpy", line 39: expected statement.
-    =======
-          ^
-
-File "game/gui.rpy", line 41: expected statement.
-    >>>>>>> Stashed changes
-                           ^
-
-File "game/gui.rpy", line 42: expected statement.
-    =======
-          ^
-
-File "game/gui.rpy", line 44: expected statement.
-    >>>>>>> Stashed changes
-                           ^
-
-File "game/screens.rpy", line 637: expected statement.
-    <<<<<<< Updated upstream
-                            ^
-
-File "game/screens.rpy", line 639: expected statement.
-    =======
-          ^
-
-File "game/screens.rpy", line 641: expected statement.
-    >>>>>>> Stashed changes
-                           ^
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.13s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
 DPI scale factor: 2.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: 'Initialize() = -6.' (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.17s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
 Interface start took 0.15s
 
 Initializing gl2 renderer:
@@ -106,5 +88,269 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 620'
 Version: '4.6.0 - Build 27.20.100.8682'
 Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(2648, 1490) drawable=(2648, 1490)
+Screen sizes: virtual=(1280, 720) physical=(2560, 1440) drawable=(2560, 1440)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 13642.67s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.04s
+Loading script took 0.19s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: 'Initialize() = -6.' (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3000, 2000)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.8682'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2560, 1440) drawable=(2560, 1440)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 13745.76s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.04s
+Loading script took 0.19s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.08s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: 'Initialize() = -6.' (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3000, 2000)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.8682'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2560, 1440) drawable=(2560, 1440)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 13821.72s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.04s
+Loading script took 0.18s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.07s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: 'Initialize() = -6.' (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3000, 2000)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.8682'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2560, 1440) drawable=(2560, 1440)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 14010.19s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.05s
+Loading script took 0.18s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: 'Initialize() = -6.' (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.01s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3000, 2000)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.8682'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2560, 1440) drawable=(2560, 1440)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 14415.55s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.03s
+Loading script took 0.17s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Dump and make backups. took 0.14s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: 'Initialize() = -6.' (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3000, 2000)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.8682'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2560, 1440) drawable=(2560, 1440)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 14543.48s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.04s
+Loading script took 0.22s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.09s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: 'Initialize() = -6.' (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3000, 2000)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics 620'
+Version: '4.6.0 - Build 27.20.100.8682'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2560, 1440) drawable=(2560, 1440)
 Maximum texture size: 4096x4096

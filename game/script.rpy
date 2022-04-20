@@ -15,8 +15,8 @@ define Taylor = Character("Taylor")
 # NOTE: RANDOMIZE MCQ OPTIONS BC THEY ARE CURRENTLY ORDERED BAD, GOOD, OK
 
 label start: # TESTER
-    "BFF" "Who would you like to date?"
     scene bg black
+    "BFF" "Who would you like to date?"
     menu:
         "Brad":
             jump brad
@@ -42,11 +42,11 @@ label characters:
         scene bg restaurant
         # Bradley Outfit Eval
         # If outfit == Bad:
-        show bradley sad
-        Bradley "Hey, uh, you look interesting…" # "can you change into something else? Please?"
+        # show bradley sad
+        # Bradley "Hey, uh, you look interesting…" # "can you change into something else? Please?"
         # else if outfit == Good:
         show bradley happy
-        Bradley "Hello! You certainly look lovely tonight…" # "Oh my god, you look absolutely gorgeous!"
+        Bradley "Oh my god, you look absolutely gorgeous!" # "Hello! You certainly look lovely tonight…" # "Oh my god, you look absolutely gorgeous!"
 
         # Bradley Food
         label brad_food:
@@ -63,11 +63,11 @@ label characters:
             # Post choice response
             label brad_food_bad: # Cheeseburger
                 show bradley sad
-                Bradley "Really, a cheeseburger in a fancy restaurant?" # "Might as well go to McDonald's"
+                Bradley "Might as well go to McDonald's"# "Really, a cheeseburger in a fancy restaurant?" # "Might as well go to McDonald's"
                 jump brad_work
             label brad_food_good: # Lobster
                 show bradley happy
-                Bradley "Wow, someone with good taste!" # "This place is famous fro its lobster."
+                Bradley "This place is famous for its lobster, I'm glad you knew that!"#"Wow, someone with good taste!" # "This place is famous fro its lobster."
                 jump brad_work
             label brad_food_ok: # Chicken Alfredo
                 show bradley neutral
@@ -89,11 +89,11 @@ label characters:
             # Post choice response
             label brad_job_bad: # I'm in between jobs right now
                 show bradley sad
-                Bradley "So... you're unemployed is what I'm hearing."
+                Bradley "I think I have to reconsider this date..."#"So... you're unemployed is what I'm hearing."
                 jump brad_dessert
             label brad_job_good: # I'm a freelancer
                 show bradley happy
-                Bradley "Nice, I respect being your own boss!"
+                Bradley "Excellent, working on your own is one step away from starting your own business!" #"Nice, I respect being your own boss!"
                 jump brad_dessert
             label brad_job_ok: # Taking a break for now
                 show bradley neutral
@@ -114,11 +114,11 @@ label characters:
             # Post choice resposne
             label brad_dessert_bad: # No dessert
                 show bradley sad
-                Bradley "Sigh... Suit yourself."
+                Bradley "Absolutely disappointing."#"Sigh... Suit yourself."
                 jump start
             label brad_dessert_good: # Macarons
                 show bradley happy
-                Bradley "Ah, someone with a taste for French cuisine!"
+                Bradley "Alors toi aussi tu aimes les desserts français!"#"Ah, someone with a taste for French cuisine!"
                 jump start
             label brad_dessert_ok: # Ice cream
                 show bradley neutral
@@ -132,11 +132,11 @@ label characters:
         scene bg underwater
         # Gold Outfit Eval
         # If outfit == Bad:
-        show gold sad
-        Gold "blub..."
+        # show gold sad
+        # Gold "blub..."
         # else if outfit == Good:
         show gold happy
-        Gold "BLUB BLUB!!"
+        Gold "BLUB BLUB!! (note: this character is still under contruction)"
 
         # Gold Food
         label gold_food:
@@ -220,8 +220,8 @@ label characters:
         scene bg shakeys
         # Owen Outfit Eval
         # If outfit == Bad:
-        show owen sad
-        Owen "Hm, not sure how game I am for your outfit..."
+        # show owen sad
+        # Owen "Hm, not sure how game I am for your outfit..."
         # else if outfit == Good:
         show owen happy
         Owen "Now that's outfit's a hit!"
@@ -273,7 +273,7 @@ label characters:
                 jump owen_dessert
             label owen_sports_ok: # Quidditch
                 show owen neutral
-                Owen "Oh that sport from the Lord of the RIngs? That's cool!"
+                Owen "Oh that sport from the Lord of the Rings? That's cool!"
                 jump owen_dessert
 
         # Owen dessert
@@ -308,8 +308,8 @@ label characters:
         scene bg french
         # irving Outfit Eval
         # If outfit == Bad:
-        show irving sad
-        Irving "Were you in a bit of a rush getting here?"
+        # show irving sad
+        # Irving "Were you in a bit of a rush getting here?"
         # else if outfit == Good:
         show irving happy
         Irving "My, don’t you look dashing! Truly elegant…"
@@ -396,8 +396,8 @@ label characters:
         scene bg midtier
         # taylor Outfit Eval
         # If outfit == Bad:
-        show taylor sad
-        Taylor "Oh, uh hey! Almost didn’t recognize you there…"
+        # show taylor sad
+        # Taylor "Oh, uh hey! Almost didn’t recognize you there…"
         # else if outfit == Good:
         show taylor happy
         Taylor "Wow, it’s been so long but you look so good!"
