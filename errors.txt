@@ -2,41 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gui.rpy", line 36: expected statement.
-    <<<<<<< Updated upstream
-                            ^
-
-File "game/gui.rpy", line 37: expected statement.
-    <<<<<<< Updated upstream
-                            ^
-
-File "game/gui.rpy", line 39: expected statement.
-    =======
-          ^
-
-File "game/gui.rpy", line 41: expected statement.
-    >>>>>>> Stashed changes
-                           ^
-
-File "game/gui.rpy", line 42: expected statement.
-    =======
-          ^
-
-File "game/gui.rpy", line 44: expected statement.
-    >>>>>>> Stashed changes
-                           ^
-
-File "game/screens.rpy", line 637: expected statement.
-    <<<<<<< Updated upstream
-                            ^
-
-File "game/screens.rpy", line 639: expected statement.
-    =======
-          ^
-
-File "game/screens.rpy", line 641: expected statement.
-    >>>>>>> Stashed changes
-                           ^
+File "game/script.rpy", line 20: expected statement.
+    config.ypos_ = 270
+                 ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Thu Apr 14 17:56:13 2022
+Tue Apr 19 23:30:55 2022

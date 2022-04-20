@@ -203,9 +203,14 @@ style input:
 ## and action fields.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
+init python:
+    ypos_c = False
 
 screen choice(items):
-    style_prefix "choice"
+    if ypos_c:
+        style_prefix "centered_choice"
+    else:
+        style_prefix "choice"
 
     vbox:
         for i in items:
@@ -221,9 +226,13 @@ style choice_vbox is vbox
 style choice_button is button
 style choice_button_text is button_text
 
+style centered_choice_vbox is vbox
+style centered_choice_button is button
+style centered_choice_button_text is button_text
+
 style choice_vbox:
     xalign 0.5
-    ypos 270
+    ypos 600
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -232,6 +241,20 @@ style choice_button is default:
     properties gui.button_properties("choice_button")
 
 style choice_button_text is default:
+    properties gui.button_text_properties("choice_button")
+
+
+style centered_choice_vbox:
+    xalign 0.5
+    ypos 270
+    yanchor 0.5
+
+    spacing gui.choice_spacing
+
+style centered_choice_button is default:
+    properties gui.button_properties("choice_button")
+
+style centered_choice_button_text is default:
     properties gui.button_text_properties("choice_button")
 
 

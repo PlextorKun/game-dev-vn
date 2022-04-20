@@ -17,16 +17,22 @@ define Taylor = Character("Taylor")
 label start: # TESTER
     scene bg black
     "BFF" "Who would you like to date?"
+    $ ypos_c = True
     menu:
         "Brad":
+            $ ypos_c = False
             jump brad
         "Gold":
+            $ ypos_c = False
             jump gold
         "Owen":
+            $ ypos_c = False
             jump owen
         "Irving":
+            $ ypos_c = False
             jump irving
         "Taylor":
+            $ ypos_c = False
             jump taylor
 
     # scene bg restaurant
