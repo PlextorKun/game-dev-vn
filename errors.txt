@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 48: expected statement.
-    ui.callsinnewcontext(dressup)
-                                 ^
+File "game/script.rpy", line 628: expected menuitem
+    jump start
+    ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Mon Apr 18 18:25:30 2022
+Wed Apr 20 21:20:01 2022

@@ -1,66 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 26, in script
-    call screen dressup
-  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/screens.rpy", line 102, in execute
-    screen dressup():
-  File "game/screens.rpy", line 102, in execute
-    screen dressup():
-  File "game/screens.rpy", line 129, in execute
-    add "top{%4}".format(mtop)
-  File "game/screens.rpy", line 129, in <module>
-    add "top{%4}".format(mtop)
-KeyError: u'%4'
+  File "game/script.rpy", line 159, in script
+    if $ score == 6:
+SyntaxError: invalid syntax (script.rpy, line 159)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 26, in script
-    call screen dressup
-  File "renpy/ast.py", line 2015, in execute
-    self.call("execute")
-  File "renpy/ast.py", line 2003, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "renpy/statements.py", line 278, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "renpy/exports.py", line 3136, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3325, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3737, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/screen.py", line 436, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3737, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/screen.py", line 447, in per_interact
-    self.update()
-  File "renpy/display/screen.py", line 637, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 102, in execute
-    screen dressup():
-  File "game/screens.rpy", line 102, in execute
-    screen dressup():
-  File "game/screens.rpy", line 129, in execute
-    add "top{%4}".format(mtop)
-  File "game/screens.rpy", line 129, in <module>
-    add "top{%4}".format(mtop)
-KeyError: u'%4'
+  File "game/script.rpy", line 159, in script
+    if $ score == 6:
+  File "renpy/ast.py", line 1898, in execute
+    if renpy.python.py_eval(condition):
+  File "renpy/python.py", line 2274, in py_eval
+    code = py_compile(code, 'eval')
+  File "renpy/python.py", line 835, in py_compile
+    raise e
+SyntaxError: invalid syntax (script.rpy, line 159)
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Date Night Dress Up 1.0
-Mon Apr 18 18:10:51 2022
+Wed Apr 20 21:20:45 2022
