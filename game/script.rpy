@@ -19,6 +19,7 @@ transform items:
     yalign 0.05
 
 label start: # TESTER
+    $ score = 0
     scene bg black
     "BFF" "Who would you like to date?"
     $ ypos_c = True
@@ -28,20 +29,19 @@ label start: # TESTER
     menu:
         "Brad":
             $ ypos_c = False
-            jump brad
+            call screen brad_dressup
         "Gold":
             $ ypos_c = False
-            call screen gold
+            call screen gold_dressup
         "Owen":
             $ ypos_c = False
-            call screen owen
+            call screen owen_dressup
         "Irving":
             $ ypos_c = False
-            call screen irving
+            call screen irving_dressup
         "Taylor":
             $ ypos_c = False
-            call screen taylor
-    $ score = 0
+            call screen taylor_dressup
 
     # scene bg restaurant
     # with fade
