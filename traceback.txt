@@ -8,6 +8,9 @@ While running game code:
   File "game/screens.rpy", line 207, in <module>
     ypos_c = false
 NameError: name 'false' is not defined
+  File "game/script.rpy", line 159, in script
+    if $ score == 6:
+SyntaxError: invalid syntax (script.rpy, line 159)
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -27,8 +30,18 @@ Full traceback:
   File "game/screens.rpy", line 207, in <module>
     ypos_c = false
 NameError: name 'false' is not defined
+  File "game/script.rpy", line 159, in script
+    if $ score == 6:
+  File "renpy/ast.py", line 1898, in execute
+    if renpy.python.py_eval(condition):
+  File "renpy/python.py", line 2274, in py_eval
+    code = py_compile(code, 'eval')
+  File "renpy/python.py", line 835, in py_compile
+    raise e
+SyntaxError: invalid syntax (script.rpy, line 159)
 
 Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
 Date Night Dress Up 1.0
 Tue Apr 19 23:58:07 2022
+Wed Apr 20 21:20:45 2022

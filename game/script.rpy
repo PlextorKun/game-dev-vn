@@ -14,26 +14,34 @@ define Taylor = Character("Taylor")
 # NOTE: CAN ADD WEIGHTS TO PLAYER CHOICES TO DETERMINE IF FINAL ENDING IS GOOD, BAD, OR NETURAL
 # NOTE: RANDOMIZE MCQ OPTIONS BC THEY ARE CURRENTLY ORDERED BAD, GOOD, OK
 
+transform items:
+    xalign 0.0
+    yalign 0.05
+
 label start: # TESTER
     scene bg black
     "BFF" "Who would you like to date?"
     $ ypos_c = True
+    transform items:
+        xalign 0.0
+        yalign 0.05
     menu:
         "Brad":
             $ ypos_c = False
             jump brad
         "Gold":
             $ ypos_c = False
-            jump gold
+            call screen gold
         "Owen":
             $ ypos_c = False
-            jump owen
+            call screen owen
         "Irving":
             $ ypos_c = False
-            jump irving
+            call screen irving
         "Taylor":
             $ ypos_c = False
-            jump taylor
+            call screen taylor
+    $ score = 0
 
     # scene bg restaurant
     # with fade
@@ -42,17 +50,37 @@ label start: # TESTER
     # # show gold happy GOLD TOO LARGER
     # Owen "Now that's outfit's a hit!"
 
+# label dressup:
+#     transform items:
+#         xalign 0.0
+#         yalign 0.05
+#
+#     # call screen dressup
+#     call screen dressup
+
+
+
+
 label characters:
     # BRADLEY CHARACTER ARC
     label brad:
-        scene bg restaurant
+
+
         # Bradley Outfit Eval
         # If outfit == Bad:
-        # show bradley sad
-        # Bradley "Hey, uh, you look interesting…" # "can you change into something else? Please?"
+        label brad_outfit_bad:
+            scene bg restaurant
+            show bradley sad
+            Bradley "Hey, uh, you look interesting…" # "can you change into something else? Please?"
+            $ score += 1
+            jump brad_food
         # else if outfit == Good:
-        show bradley happy
-        Bradley "Oh my god, you look absolutely gorgeous!" # "Hello! You certainly look lovely tonight…" # "Oh my god, you look absolutely gorgeous!"
+        label brad_outfit_good:
+            scene bg restaurant
+            show bradley happy
+            Bradley "Hello! You certainly look lovely tonight…" # "Oh my god, you look absolutely gorgeous!"
+            $ score += 3
+            jump brad_food
 
         # Bradley Food
         label brad_food:
@@ -60,12 +88,13 @@ label characters:
             Bradley "What do you want to order?"
             menu:
                 "Cheeseburger":
+                    $ score -= 1
                     jump brad_food_bad
                 "Lobster":
+                    $ score += 1
                     jump brad_food_good
                 "Chicken Alfredo":
                     jump brad_food_ok
-
             # Post choice response
             label brad_food_bad: # Cheeseburger
                 show bradley sad
@@ -86,12 +115,13 @@ label characters:
             Bradley "So what do you do for work?"
             menu:
                 "I'm in between jobs right now":
+                    $ score -= 1
                     jump brad_job_bad
                 "I'm a freelancer":
+                    $ score += 1
                     jump brad_job_good
                 "Taking a break for now":
                     jump brad_job_ok
-
             # Post choice response
             label brad_job_bad: # I'm in between jobs right now
                 show bradley sad
@@ -112,8 +142,10 @@ label characters:
             Bradley "So what do you want to get for dessert?"
             menu:
                 "No dessert":
+                    $ score -= 1
                     jump brad_dessert_bad
                 "Macarons":
+                    $ score += 1
                     jump brad_dessert_good
                 "Ice cream":
                     jump brad_dessert_ok
@@ -121,28 +153,43 @@ label characters:
             label brad_dessert_bad: # No dessert
                 show bradley sad
                 Bradley "Absolutely disappointing."#"Sigh... Suit yourself."
-                jump start
+                jump brad_end
             label brad_dessert_good: # Macarons
                 show bradley happy
-                Bradley "Alors toi aussi tu aimes les desserts français!"#"Ah, someone with a taste for French cuisine!"
-                jump start
+                Bradley "Alors toi aussi tu aimes les desserts français!"
+                jump brad_end
             label brad_dessert_ok: # Ice cream
                 show bradley neutral
                 Bradley "I guess you can never go wrong with ice cream!"
-                jump start
+                jump brad_end
 
+        label brad_end:
+            if score == 6:
+                jump ending_perfect
+            elif score >= 4:
+                jump ending_good
+            else:
+                jump ending_bad
 
 
     # GOLD CHARACTER ARC
     label gold:
-        scene bg underwater
+
         # Gold Outfit Eval
         # If outfit == Bad:
-        # show gold sad
-        # Gold "blub..."
+        label gold_outfit_bad:
+            scene bg underwater
+            show gold sad
+            Gold "blub..."
+            $ score += 1
+            jump gold_food
         # else if outfit == Good:
-        show gold happy
-        Gold "BLUB BLUB!! (note: this character is still under contruction)"
+        label gold_outfit_good:
+            scene bg underwater
+            show gold happy
+            Gold "BLUB BLUB!!"
+            $ score += 3
+            jump gold_food
 
         # Gold Food
         label gold_food:
@@ -150,11 +197,14 @@ label characters:
             Gold "Blub blub blub?"
             menu:
                 "Fish sticks":
+                    $ score -= 1
                     jump gold_food_bad
                 "Steak":
+                    $ score += 1
                     jump gold_food_good
                 "Pasta":
                     jump gold_food_ok
+
             # Post choice response
             label gold_food_bad: # Fish sticks
                 show gold sad
@@ -175,8 +225,10 @@ label characters:
             Gold "blub blub blub. blub blub blub!"
             menu:
                 "Um, blub blub?":
+                    $ score -= 1
                     jump gold_query_bad
                 "Oh my god, you're so funny!":
+                    $ score += 1
                     jump gold_query_good
                 "Sorry, I can't really speak fish":
                     jump gold_query_ok
@@ -200,8 +252,10 @@ label characters:
             Gold "Blub?"
             menu:
                 "Taiyaki":
+                    $ score -= 1
                     jump gold_dessert_bad
                 "Tiramisu":
+                    $ score += 1
                     jump gold_dessert_good
                 "Jello":
                     jump gold_dessert_ok
@@ -209,28 +263,43 @@ label characters:
             label gold_dessert_bad: # Taiyaki
                 show gold sad
                 Gold "Blub..."
-                jump start
+                jump gold_end
             label gold_dessert_good: # Tiramisu
                 show gold happy
                 Gold "BLUB BLUB!!"
-                jump start
+                jump gold_end
             label gold_dessert_ok: # Jello
                 show gold neutral
                 Gold "blub blub blub"
-                jump start
+                jump gold_end
 
+            label gold_end:
+                if score == 6:
+                    jump ending_perfect
+                elif score >= 4:
+                    jump ending_good
+                else:
+                    jump ending_bad
 
 
     # OWEN CHARACTER ARC
     label owen:
-        scene bg shakeys
+
         # Owen Outfit Eval
         # If outfit == Bad:
-        # show owen sad
-        # Owen "Hm, not sure how game I am for your outfit..."
+        label owen_outfit_bad:
+            scene bg shakeys
+            show owen sad
+            Owen "Hm, not sure how game I am for your outfit..."
+            $ score += 1
+            jump owen_food
         # else if outfit == Good:
-        show owen happy
-        Owen "Now that's outfit's a hit!"
+        label owen_outfit_good:
+            scene bg shakeys
+            show owen happy
+            Owen "Now that's outfit's a hit!"
+            $ score += 3
+            jump owen_food
 
         # Owen Food
         label owen_food:
@@ -238,8 +307,10 @@ label characters:
             Owen "What d'ya wanna eat?"
             menu:
                 "Pizza":
+                    $ score -= 1
                     jump owen_food_bad
                 "Salad and Vegetable Smoothie":
+                    $ score += 1
                     jump owen_food_good
                 "Burger, Fries, and a Milkshake":
                     jump owen_food_ok
@@ -263,8 +334,10 @@ label characters:
             Owen "What's your favorite sport?"
             menu:
                 "I'm not really into sports...":
+                    $ score -= 1
                     jump owen_sports_bad
                 "Football":
+                    $ score += 1
                     jump owen_sports_good
                 "Quidditch":
                     jump owen_sports_ok
@@ -288,8 +361,10 @@ label characters:
             Owen "You up for dessert?"
             menu:
                 "Cheesecake":
+                    $ score -= 1
                     jump owen_dessert_bad
                 "I think I'll pass on dessert.":
+                    $ score += 1
                     jump owen_dessert_good
                 "Fruit salad":
                     jump owen_dessert_ok
@@ -297,28 +372,42 @@ label characters:
             label owen_dessert_bad: # Cheesecake
                 show owen sad
                 Owen "Yikes..."
-                jump start
+                jump owen_end
             label owen_dessert_good: # I think I'll pass on dessert.
                 show owen happy
                 Owen "Now that's thinkin' healthy!"
-                jump start
+                jump owen_end
             label owen_dessert_ok: # Fruit salad
                 show owen neutral
                 Owen "Those are kinda sugary, but at least it's all-natural!"
-                jump start
+                jump owen_end
 
+            label owen_end:
+                if score == 6:
+                    jump ending_perfect
+                elif score >= 4:
+                    jump ending_good
+                else:
+                    jump ending_bad
 
 
     # IRVING CHARACTER ARC
     label irving:
-        scene bg french
         # irving Outfit Eval
         # If outfit == Bad:
-        # show irving sad
-        # Irving "Were you in a bit of a rush getting here?"
+        label irving_outfit_bad:
+            scene bg french
+            show irving sad
+            Irving "Were you in a bit of a rush getting here?"
+            $ score += 1
+            jump irving_food
         # else if outfit == Good:
-        show irving happy
-        Irving "My, don’t you look dashing! Truly elegant…"
+        label irving_outfit_good:
+            scene bg french
+            show irving happy
+            Irving "My, don’t you look dashing! Truly elegant…"
+            $ score += 3
+            jump irving_food
 
         # irving Food
         label irving_food:
@@ -326,8 +415,10 @@ label characters:
             Irving "What are we craving tonight, darling?"
             menu:
                 "Pasta salad":
+                    $ score -= 1
                     jump irving_food_bad
                 "Shrimp Ceviche":
+                    $ score += 1
                     jump irving_food_good
                 "Ravioli":
                     jump irving_food_ok
@@ -351,8 +442,10 @@ label characters:
             Irving "So, what academic horizons are you pursuing?"
             menu:
                 "I don't really think school is a right fit for me...":
+                    $ score -= 1
                     jump irving_study_bad
                 "Architecture":
+                    $ score += 1
                     jump irving_study_good
                 "Computer Science":
                     jump irving_study_ok
@@ -376,8 +469,10 @@ label characters:
             Irving "Saved some room for dessert, I hope?"
             menu:
                 "Brownie Sunday":
+                    $ score -= 1
                     jump irving_dessert_bad
                 "Creme Brulee":
+                    $ score += 1
                     jump irving_dessert_good
                 "Nope, no dessert for me!":
                     jump irving_dessert_ok
@@ -385,28 +480,42 @@ label characters:
             label irving_dessert_bad: # Brownie Sunday
                 show irving sad
                 Irving "Immaturity is the incapacity to use one’s intelligence without the guidance of another."
-                jump start
+                jump irving_end
             label irving_dessert_good: # I think I'll pass on dessert.
                 show irving happy
                 Irving "Decisions are the frequent fabric of our daily design."
-                jump start
+                jump irving_end
             label irving_dessert_ok: # I think I'll pass on dessert.
                 show irving neutral
                 Irving "The content of your character is your choice"
-                jump start
+                jump irving_end
 
+            label irving_end:
+                if score == 6:
+                    jump ending_perfect
+                elif score >= 4:
+                    jump ending_good
+                else:
+                    jump ending_bad
 
 
     # TAYLOR CHARACTER ARC
     label taylor:
-        scene bg midtier
         # taylor Outfit Eval
         # If outfit == Bad:
-        # show taylor sad
-        # Taylor "Oh, uh hey! Almost didn’t recognize you there…"
+        label taylor_outfit_bad:
+            scene bg midtier
+            show taylor sad
+            Taylor "Oh, uh hey! Almost didn’t recognize you there…"
+            $ score += 1
+            jump taylor_food
         # else if outfit == Good:
-        show taylor happy
-        Taylor "Wow, it’s been so long but you look so good!"
+        label taylor_outfit_good:
+            scene bg midtier
+            show taylor happy
+            Taylor "Wow, it’s been so long but you look so good!"
+            $ score += 3
+            jump taylor_food
 
         # taylor Food
         label taylor_food:
@@ -414,8 +523,10 @@ label characters:
             Taylor "All right, what's on the menu tonight?"
             menu:
                 "Onion Rings":
+                    $ score -= 1
                     jump taylor_food_bad
                 "Veggie Burger":
+                    $ score += 1
                     jump taylor_food_good
                 "Crab Cakes":
                     jump taylor_food_ok
@@ -439,8 +550,10 @@ label characters:
             Taylor "So, how's it going?"
             menu:
                 "Fine.":
+                    $ score -= 1
                     jump taylor_past_bad
                 "It’s been a tough week, but things are looking up!":
+                    $ score += 1
                     jump taylor_past_good
                 "I didn't have such a great week.":
                     jump taylor_past_ok
@@ -464,8 +577,10 @@ label characters:
             Taylor "Dessert! The best meal, for sure! Whatcha thinkin'?"
             menu:
                 "I think I’ll pass…":
+                    $ score -= 1
                     jump taylor_dessert_bad
                 "Chocolate milkshake":
+                    $ score += 1
                     jump taylor_dessert_good
                 "Cheesecake":
                     jump taylor_dessert_ok
@@ -473,14 +588,52 @@ label characters:
             label taylor_dessert_bad: # I think I'll pass...
                 show taylor sad
                 Taylor "That desperate to leave, huh?"
-                jump start
+                jump taylor_end
             label taylor_dessert_good: # Chocolate milkshake
                 show taylor happy
                 Taylor "Oh my god, just like when we were kids!"
-                jump start
+                jump taylor_end
             label taylor_dessert_ok: # Cheesecake.
                 show taylor neutral
                 Taylor "A true classic."
+                jump taylor_end
+
+            label taylor_end:
+                if score == 6:
+                    jump ending_perfect
+                elif score >= 4:
+                    jump ending_good
+                else:
+                    jump ending_bad
+
+
+
+    # PERFECT ENDING
+    label ending_perfect:
+        scene bg perfect ending
+        "Is this true love? You've matched perfectly with your date!"
+        menu:
+            "Start again":
+                jump start
+
+
+
+    # GOOD ENDING
+    label ending_good:
+        scene bg good ending
+        "Congrats! You've finally found someone to help you move over your ex..."
+        menu:
+            "Start again":
+                jump start
+
+
+
+    # BAD ENDING
+    label ending_bad:
+        scene bg bad ending
+        "Unfortunately, this date didn't go as well as you hoped... But that's ok! Keep trying!"
+        menu:
+            "Start again":
                 jump start
 
 

@@ -8,3 +8,9 @@ File "game/script.rpy", line 20: expected statement.
 
 Ren'Py Version: Ren'Py 7.4.11.2266
 Tue Apr 19 23:30:55 2022
+File "game/script.rpy", line 628: expected menuitem
+    jump start
+    ^
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Wed Apr 20 21:20:01 2022

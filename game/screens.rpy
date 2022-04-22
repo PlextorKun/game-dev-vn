@@ -95,6 +95,239 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
+
+
+default mtop = 0
+
+# rip imagining needing to hardcode different functions just to change 1 var
+# make this more efficient later please jfc
+screen brad_dressup():
+    tag menu
+    # add "dressup bg"
+    add "base" at items
+
+    textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
+        text_size 36
+        text_color "#fff"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    textbutton "x" action SetVariable("mtop", 0) xalign 0.90 yalign 0.125:
+        text_size 24
+        text_color "#d5dee8"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    if mtop == 0 or mtop == 4 or mtop == 8:
+        textbutton "Ready!" action Jump("brad_outfit_good") xalign 0.90 yalign 0.325:
+            text_size 24
+            text_color "#d5dee8"
+            text_hover_color "#6ba0e3"
+            text_outlines [ (2, "#0049a8", 0, 0) ]
+    else:
+        textbutton "Ready!" action Jump("brad_outfit_bad") xalign 0.90 yalign 0.325:
+            text_size 24
+            text_color "#d5dee8"
+            text_hover_color "#6ba0e3"
+            text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    ## If you're using the if statements for the images
+    # if mtop == 1:
+    #     add "fit brad" at items
+    # elif mtop == 2:
+    #     add "fit fish" at items
+    # elif mtop == 3:
+    #     add "fit owen" at items
+
+    ## If you're using the format option for showing images- NOTE: don't use both the if
+    ## statement above and this!
+    add "top{}".format(mtop)
+
+
+
+
+screen gold_dressup():
+    tag menu
+    # add "dressup bg"
+    add "base" at items
+
+    textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
+        text_size 36
+        text_color "#fff"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    textbutton "x" action SetVariable("mtop", 0) xalign 0.90 yalign 0.125:
+        text_size 24
+        text_color "#d5dee8"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    if mtop == 1 or mtop == 5 or mtop == 9 or mtop == 13:
+        textbutton "Ready!" action Jump("gold_outfit_good") xalign 0.90 yalign 0.325:
+            text_size 24
+            text_color "#d5dee8"
+            text_hover_color "#6ba0e3"
+            text_outlines [ (2, "#0049a8", 0, 0) ]
+    else:
+        textbutton "Ready!" action Jump("gold_outfit_bad") xalign 0.90 yalign 0.325:
+            text_size 24
+            text_color "#d5dee8"
+            text_hover_color "#6ba0e3"
+            text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    ## If you're using the if statements for the images
+    # if mtop == 1:
+    #     add "fit brad" at items
+    # elif mtop == 2:
+    #     add "fit fish" at items
+    # elif mtop == 3:
+    #     add "fit owen" at items
+
+    ## If you're using the format option for showing images- NOTE: don't use both the if
+    ## statement above and this!
+    add "top{}".format(mtop)
+
+
+
+
+
+screen owen_dressup():
+    tag menu
+    # add "dressup bg"
+    add "base" at items
+
+    textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
+        text_size 36
+        text_color "#fff"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    textbutton "x" action SetVariable("mtop", 0) xalign 0.90 yalign 0.125:
+        text_size 24
+        text_color "#d5dee8"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    if mtop == 3 or mtop == 7 or mtop == 11:
+        textbutton "Ready!" action Jump("owen_outfit_good") xalign 0.90 yalign 0.325:
+            text_size 24
+            text_color "#d5dee8"
+            text_hover_color "#6ba0e3"
+            text_outlines [ (2, "#0049a8", 0, 0) ]
+    else:
+        textbutton "Ready!" action Jump("owen_outfit_bad") xalign 0.90 yalign 0.325:
+            text_size 24
+            text_color "#d5dee8"
+            text_hover_color "#6ba0e3"
+            text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    ## If you're using the if statements for the images
+    # if mtop == 1:
+    #     add "fit brad" at items
+    # elif mtop == 2:
+    #     add "fit fish" at items
+    # elif mtop == 3:
+    #     add "fit owen" at items
+
+    ## If you're using the format option for showing images- NOTE: don't use both the if
+    ## statement above and this!
+    add "top{}".format(mtop)
+
+
+
+
+
+screen irving_dressup():
+    tag menu
+    # add "dressup bg"
+    add "base" at items
+
+    textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
+        text_size 36
+        text_color "#fff"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    textbutton "x" action SetVariable("mtop", 0) xalign 0.90 yalign 0.125:
+        text_size 24
+        text_color "#d5dee8"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    if mtop == 2 or mtop == 6 or mtop == 10 or mtop == 14:
+        textbutton "Ready!" action Jump("irving_outfit_good") xalign 0.90 yalign 0.325:
+            text_size 24
+            text_color "#d5dee8"
+            text_hover_color "#6ba0e3"
+            text_outlines [ (2, "#0049a8", 0, 0) ]
+    else:
+        textbutton "Ready!" action Jump("irving_outfit_bad") xalign 0.90 yalign 0.325:
+            text_size 24
+            text_color "#d5dee8"
+            text_hover_color "#6ba0e3"
+            text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    ## If you're using the if statements for the images
+    # if mtop == 1:
+    #     add "fit brad" at items
+    # elif mtop == 2:
+    #     add "fit fish" at items
+    # elif mtop == 3:
+    #     add "fit owen" at items
+
+    ## If you're using the format option for showing images- NOTE: don't use both the if
+    ## statement above and this!
+    add "top{}".format(mtop)
+
+
+
+
+
+screen taylor_dressup():
+    tag menu
+    # add "dressup bg"
+    add "base" at items
+
+    textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
+        text_size 36
+        text_color "#fff"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    textbutton "x" action SetVariable("mtop", 0) xalign 0.90 yalign 0.125:
+        text_size 24
+        text_color "#d5dee8"
+        text_hover_color "#6ba0e3"
+        text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    if mtop == 25 or mtop == 65 or mtop == 140 or mtop == 134:
+        textbutton "Ready!" action Jump("taylor_outfit_good") xalign 0.90 yalign 0.325:
+            text_size 24
+            text_color "#d5dee8"
+            text_hover_color "#6ba0e3"
+            text_outlines [ (2, "#0049a8", 0, 0) ]
+    else:
+        textbutton "Ready!" action Jump("taylor_outfit_bad") xalign 0.90 yalign 0.325:
+            text_size 24
+            text_color "#d5dee8"
+            text_hover_color "#6ba0e3"
+            text_outlines [ (2, "#0049a8", 0, 0) ]
+
+    ## If you're using the if statements for the images
+    # if mtop == 1:
+    #     add "fit brad" at items
+    # elif mtop == 2:
+    #     add "fit fish" at items
+    # elif mtop == 3:
+    #     add "fit owen" at items
+
+    ## If you're using the format option for showing images- NOTE: don't use both the if
+    ## statement above and this!
+    add "top{}".format(mtop)
+
+
+
 screen say(who, what):
     style_prefix "say"
 
