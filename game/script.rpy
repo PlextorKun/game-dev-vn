@@ -15,8 +15,8 @@ define Taylor = Character("Taylor")
 # NOTE: RANDOMIZE MCQ OPTIONS BC THEY ARE CURRENTLY ORDERED BAD, GOOD, OK
 
 transform items:
-    xalign 0.0
-    yalign 0.05
+    xalign 0.5
+    yalign 0.5
 
 label start: # TESTER
     $ score = 0
@@ -24,8 +24,8 @@ label start: # TESTER
     "BFF" "Who would you like to date?"
     $ ypos_c = True
     transform items:
-        xalign 0.0
-        yalign 0.05
+        xalign 0.5
+        yalign 0.5
     menu:
         "Brad":
             $ ypos_c = False

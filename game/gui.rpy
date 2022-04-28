@@ -55,13 +55,13 @@ define gui.interface_text_color = u'#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "fonts/RobotoMono-Light.ttf"
+define gui.text_font = "fonts/Roboto-Light.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "fonts/RobotoMono-Medium.ttf"
+define gui.name_text_font = "fonts/Roboto-Medium.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "fonts/RobotoMono-Light.ttf"
+define gui.interface_text_font = "fonts/Roboto-Light.ttf"
 
 ## font for the title
 define gui.title_text_font = "fonts/THE MEZIRANE.ttf"
@@ -108,7 +108,7 @@ define gui.textbox_yalign = 1.0
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
 define gui.name_xpos = 255
-define gui.name_ypos = -118
+define gui.name_ypos = -113
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -261,7 +261,7 @@ define gui.notify_ypos = 45
 define gui.choice_spacing = 22
 
 ## Buttons in the navigation section of the main and game menus.
-define gui.navigation_spacing = 4
+define gui.navigation_spacing = 7
 
 ## Controls the amount of spacing between preferences.
 define gui.pref_spacing = 10

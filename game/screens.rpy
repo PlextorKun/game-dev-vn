@@ -103,7 +103,7 @@ default mtop = 0
 # make this more efficient later please jfc
 screen brad_dressup():
     tag menu
-    # add "dressup bg"
+    add "closet"
     add "base" at items
 
     textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
@@ -148,7 +148,7 @@ screen brad_dressup():
 
 screen gold_dressup():
     tag menu
-    # add "dressup bg"
+    add "closet"
     add "base" at items
 
     textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
@@ -194,7 +194,7 @@ screen gold_dressup():
 
 screen owen_dressup():
     tag menu
-    # add "dressup bg"
+    add "closet"
     add "base" at items
 
     textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
@@ -223,16 +223,20 @@ screen owen_dressup():
             text_outlines [ (2, "#0049a8", 0, 0) ]
 
     ## If you're using the if statements for the images
-    # if mtop == 1:
-    #     add "fit brad" at items
-    # elif mtop == 2:
-    #     add "fit fish" at items
-    # elif mtop == 3:
-    #     add "fit owen" at items
+    if mtop == 1:
+        add "Max_Bradley" at items
+    elif mtop == 2:
+        add "Max_Fish" at items
+    elif mtop == 3:
+        add "Max_Irving" at items
+    elif mtop == 4:
+        add "Max_Owen" at items
+    elif mtop == 5:
+        add "Max_Taylor" at items
 
     ## If you're using the format option for showing images- NOTE: don't use both the if
     ## statement above and this!
-    add "top{}".format(mtop)
+    # add "top{}".format(mtop)
 
 
 
@@ -240,7 +244,7 @@ screen owen_dressup():
 
 screen irving_dressup():
     tag menu
-    # add "dressup bg"
+    add "closet"
     add "base" at items
 
     textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
@@ -286,7 +290,7 @@ screen irving_dressup():
 
 screen taylor_dressup():
     tag menu
-    # add "dressup bg"
+    add "closet"
     add "base" at items
 
     textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
