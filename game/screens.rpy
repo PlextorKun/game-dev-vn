@@ -223,20 +223,16 @@ screen owen_dressup():
             text_outlines [ (2, "#0049a8", 0, 0) ]
 
     ## If you're using the if statements for the images
-    if mtop == 1:
-        add "Max_Bradley" at items
-    elif mtop == 2:
-        add "Max_Fish" at items
-    elif mtop == 3:
-        add "Max_Irving" at items
-    elif mtop == 4:
-        add "Max_Owen" at items
-    elif mtop == 5:
-        add "Max_Taylor" at items
+    # if mtop == 1:
+    #     add "fit brad" at items
+    # elif mtop == 2:
+    #     add "fit fish" at items
+    # elif mtop == 3:
+    #     add "fit owen" at items
 
     ## If you're using the format option for showing images- NOTE: don't use both the if
     ## statement above and this!
-    # add "top{}".format(mtop)
+    add "top{}".format(mtop)
 
 
 
@@ -305,7 +301,7 @@ screen taylor_dressup():
         text_hover_color "#6ba0e3"
         text_outlines [ (2, "#0049a8", 0, 0) ]
 
-    if mtop == 25 or mtop == 65 or mtop == 140 or mtop == 134:
+    if mtop == 2 or mtop == 6 or mtop == 10 or mtop == 14:
         textbutton "Ready!" action Jump("taylor_outfit_good") xalign 0.90 yalign 0.325:
             text_size 24
             text_color "#d5dee8"

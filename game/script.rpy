@@ -487,7 +487,7 @@ label characters:
                 jump irving_end
             label irving_dessert_ok: # I think I'll pass on dessert.
                 show irving neutral
-                Irving "The content of your character is your choice"
+                Irving "The content of your character is your choice."
                 jump irving_end
 
             label irving_end:
