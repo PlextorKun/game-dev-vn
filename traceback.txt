@@ -1,25 +1,27 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' u'images/characters/Gold/gold sad.png'>:
-  File "game/script.rpy", line 183, in script
-    Gold "blub..."
-IOError: Couldn't find file 'images/characters/Gold/gold sad.png'.
+While loading <'Image' u'game/images/clothes/Max_Bradley.png'>:
+  File "game/script.rpy", line 32, in script
+    call screen brad_dressup
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+IOError: Couldn't find file 'game/images/clothes/Max_Bradley.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 183, in script
-    Gold "blub..."
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 721, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 1419, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 1249, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 901, in do_display
-    **display_args)
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 647, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "game/script.rpy", line 32, in script
+    call screen brad_dressup
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
   File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
@@ -34,8 +36,24 @@ Full traceback:
     surf = render(child, width, height, cst, cat)
   File "render.pyx", line 170, in renpy.display.render.render
   File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/transition.py", line 183, in render
+    surf = renpy.display.render.render(trans, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/transition.py", line 360, in render
+    return render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
   File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
     surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 688, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
   File "render.pyx", line 170, in renpy.display.render.render
   File "render.pyx", line 263, in renpy.display.render.render
   File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
@@ -46,21 +64,15 @@ Full traceback:
     return transform_render(self, width, height, st, at)
   File "accelerator.pyx", line 187, in renpy.display.accelerator.transform_render
   File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/image.py", line 501, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/image.py", line 307, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
   File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 625, in render
     return cache.get(self, render=True)
   File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 287, in get
     surf = image.load()
   File "C:\Users\myria\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 706, in load
     raise e
-IOError: Couldn't find file 'images/characters/Gold/gold sad.png'.
+IOError: Couldn't find file 'game/images/clothes/Max_Bradley.png'.
 
 Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
 Date Night Dress Up 1.0
-Tue Apr 26 18:40:06 2022
+Thu May  5 12:32:00 2022

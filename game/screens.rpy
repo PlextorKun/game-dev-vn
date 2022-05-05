@@ -106,7 +106,7 @@ screen brad_dressup():
     add "closet"
     add "base" at items
 
-    textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
+    textbutton "Outfit" action SetVariable("mtop", (mtop) % 5 + 1) xalign 0.86 yalign 0.12:
         text_size 36
         text_color "#fff"
         text_hover_color "#6ba0e3"
@@ -118,7 +118,7 @@ screen brad_dressup():
         text_hover_color "#6ba0e3"
         text_outlines [ (2, "#0049a8", 0, 0) ]
 
-    if mtop == 0 or mtop == 4 or mtop == 8:
+    if mtop == 1 or mtop == 5 or mtop == 8:
         textbutton "Ready!" action Jump("brad_outfit_good") xalign 0.90 yalign 0.325:
             text_size 24
             text_color "#d5dee8"
@@ -131,17 +131,21 @@ screen brad_dressup():
             text_hover_color "#6ba0e3"
             text_outlines [ (2, "#0049a8", 0, 0) ]
 
-    ## If you're using the if statements for the images
-    # if mtop == 1:
-    #     add "fit brad" at items
-    # elif mtop == 2:
-    #     add "fit fish" at items
-    # elif mtop == 3:
-    #     add "fit owen" at items
+    # If you're using the if statements for the images
+    if mtop == 1:
+        add "images/clothes/Max_Bradley.png" at items
+    elif mtop == 2:
+        add "images/clothes/Max_Fish.png" at items
+    elif mtop == 3:
+        add "images/clothes/Max_Owen.png" at items
+    elif mtop == 4:
+        add "images/clothes/Max_Taylor.png" at items
+    elif mtop == 5:
+        add "images/clothes/Max_Irving.png" at items
 
     ## If you're using the format option for showing images- NOTE: don't use both the if
     ## statement above and this!
-    add "top{}".format(mtop)
+    # add "top{}".format(mtop)
 
 
 
@@ -151,7 +155,7 @@ screen gold_dressup():
     add "closet"
     add "base" at items
 
-    textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
+    textbutton "Outfit" action SetVariable("mtop", (mtop) % 5 + 1) xalign 0.86 yalign 0.12:
         text_size 36
         text_color "#fff"
         text_hover_color "#6ba0e3"
@@ -163,7 +167,7 @@ screen gold_dressup():
         text_hover_color "#6ba0e3"
         text_outlines [ (2, "#0049a8", 0, 0) ]
 
-    if mtop == 1 or mtop == 5 or mtop == 9 or mtop == 13:
+    if mtop == 2 or mtop == 5 or mtop == 9 or mtop == 13:
         textbutton "Ready!" action Jump("gold_outfit_good") xalign 0.90 yalign 0.325:
             text_size 24
             text_color "#d5dee8"
@@ -177,16 +181,20 @@ screen gold_dressup():
             text_outlines [ (2, "#0049a8", 0, 0) ]
 
     ## If you're using the if statements for the images
-    # if mtop == 1:
-    #     add "fit brad" at items
-    # elif mtop == 2:
-    #     add "fit fish" at items
-    # elif mtop == 3:
-    #     add "fit owen" at items
+    if mtop == 1:
+        add "images/clothes/Max_Bradley.png" at items
+    elif mtop == 2:
+        add "images/clothes/Max_Fish.png" at items
+    elif mtop == 3:
+        add "images/clothes/Max_Owen.png" at items
+    elif mtop == 4:
+        add "images/clothes/Max_Taylor.png" at items
+    elif mtop == 5:
+        add "images/clothes/Max_Irving.png" at items
 
     ## If you're using the format option for showing images- NOTE: don't use both the if
     ## statement above and this!
-    add "top{}".format(mtop)
+    #add "top{}".format(mtop)
 
 
 
@@ -197,7 +205,7 @@ screen owen_dressup():
     add "closet"
     add "base" at items
 
-    textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
+    textbutton "Outfit" action SetVariable("mtop", (mtop) % 5 + 1) xalign 0.86 yalign 0.12:
         text_size 36
         text_color "#fff"
         text_hover_color "#6ba0e3"
@@ -223,16 +231,20 @@ screen owen_dressup():
             text_outlines [ (2, "#0049a8", 0, 0) ]
 
     ## If you're using the if statements for the images
-    # if mtop == 1:
-    #     add "fit brad" at items
-    # elif mtop == 2:
-    #     add "fit fish" at items
-    # elif mtop == 3:
-    #     add "fit owen" at items
+    if mtop == 1:
+        add "images/clothes/Max_Bradley.png" at items
+    elif mtop == 2:
+        add "images/clothes/Max_Fish.png" at items
+    elif mtop == 3:
+        add "images/clothes/Max_Owen.png" at items
+    elif mtop == 4:
+        add "images/clothes/Max_Taylor.png" at items
+    elif mtop == 5:
+        add "images/clothes/Max_Irving.png" at items
 
     ## If you're using the format option for showing images- NOTE: don't use both the if
     ## statement above and this!
-    add "top{}".format(mtop)
+    #add "top{}".format(mtop)
 
 
 
@@ -243,7 +255,7 @@ screen irving_dressup():
     add "closet"
     add "base" at items
 
-    textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
+    textbutton "Outfit" action SetVariable("mtop", (mtop) % 5 + 1) xalign 0.86 yalign 0.12:
         text_size 36
         text_color "#fff"
         text_hover_color "#6ba0e3"
@@ -255,7 +267,7 @@ screen irving_dressup():
         text_hover_color "#6ba0e3"
         text_outlines [ (2, "#0049a8", 0, 0) ]
 
-    if mtop == 2 or mtop == 6 or mtop == 10 or mtop == 14:
+    if mtop == 5 or mtop == 6 or mtop == 10 or mtop == 14:
         textbutton "Ready!" action Jump("irving_outfit_good") xalign 0.90 yalign 0.325:
             text_size 24
             text_color "#d5dee8"
@@ -269,16 +281,20 @@ screen irving_dressup():
             text_outlines [ (2, "#0049a8", 0, 0) ]
 
     ## If you're using the if statements for the images
-    # if mtop == 1:
-    #     add "fit brad" at items
-    # elif mtop == 2:
-    #     add "fit fish" at items
-    # elif mtop == 3:
-    #     add "fit owen" at items
+    if mtop == 1:
+        add "images/clothes/Max_Bradley.png" at items
+    elif mtop == 2:
+        add "images/clothes/Max_Fish.png" at items
+    elif mtop == 3:
+        add "images/clothes/Max_Owen.png" at items
+    elif mtop == 4:
+        add "images/clothes/Max_Taylor.png" at items
+    elif mtop == 5:
+        add "images/clothes/Max_Irving.png" at items
 
     ## If you're using the format option for showing images- NOTE: don't use both the if
     ## statement above and this!
-    add "top{}".format(mtop)
+    #add "top{}".format(mtop)
 
 
 
@@ -289,7 +305,7 @@ screen taylor_dressup():
     add "closet"
     add "base" at items
 
-    textbutton "Outfit" action SetVariable("mtop", (mtop) % 14 + 1) xalign 0.86 yalign 0.12:
+    textbutton "Outfit" action SetVariable("mtop", (mtop) % 5 + 1) xalign 0.86 yalign 0.12:
         text_size 36
         text_color "#fff"
         text_hover_color "#6ba0e3"
@@ -301,7 +317,7 @@ screen taylor_dressup():
         text_hover_color "#6ba0e3"
         text_outlines [ (2, "#0049a8", 0, 0) ]
 
-    if mtop == 2 or mtop == 6 or mtop == 10 or mtop == 14:
+    if mtop == 4 or mtop == 6 or mtop == 10 or mtop == 14:
         textbutton "Ready!" action Jump("taylor_outfit_good") xalign 0.90 yalign 0.325:
             text_size 24
             text_color "#d5dee8"
@@ -315,16 +331,20 @@ screen taylor_dressup():
             text_outlines [ (2, "#0049a8", 0, 0) ]
 
     ## If you're using the if statements for the images
-    # if mtop == 1:
-    #     add "fit brad" at items
-    # elif mtop == 2:
-    #     add "fit fish" at items
-    # elif mtop == 3:
-    #     add "fit owen" at items
+    if mtop == 1:
+        add "images/clothes/Max_Bradley.png" at items
+    elif mtop == 2:
+        add "images/clothes/Max_Fish.png" at items
+    elif mtop == 3:
+        add "images/clothes/Max_Owen.png" at items
+    elif mtop == 4:
+        add "images/clothes/Max_Taylor.png" at items
+    elif mtop == 5:
+        add "images/clothes/Max_Irving.png" at items
 
     ## If you're using the format option for showing images- NOTE: don't use both the if
     ## statement above and this!
-    add "top{}".format(mtop)
+    #add "top{}".format(mtop)
 
 
 

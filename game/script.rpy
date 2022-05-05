@@ -14,9 +14,9 @@ define Taylor = Character("Taylor")
 # NOTE: CAN ADD WEIGHTS TO PLAYER CHOICES TO DETERMINE IF FINAL ENDING IS GOOD, BAD, OR NETURAL
 # NOTE: RANDOMIZE MCQ OPTIONS BC THEY ARE CURRENTLY ORDERED BAD, GOOD, OK
 
-transform items:
-    xalign 0.5
-    yalign 0.5
+# transform items:
+#     xalign 0.5
+#     yalign 0.5
 
 label start: # TESTER
     $ score = 0
@@ -24,7 +24,7 @@ label start: # TESTER
     "BFF" "Who would you like to date?"
     $ ypos_c = True
     transform items:
-        xalign 0.5
+        xpos 400
         yalign 0.5
     menu:
         "Brad":
@@ -611,7 +611,7 @@ label characters:
     # PERFECT ENDING
     label ending_perfect:
         scene bg perfect ending
-        "Is this true love? You've matched perfectly with your date!"
+        "BFF" "Is this true love? You've matched perfectly with your date!"
         menu:
             "Start again":
                 jump start
@@ -621,7 +621,7 @@ label characters:
     # GOOD ENDING
     label ending_good:
         scene bg good ending
-        "Congrats! You've finally found someone to help you move over your ex..."
+        "BFF" "Congrats! You've finally found someone to help you move over your ex..."
         menu:
             "Start again":
                 jump start
@@ -631,7 +631,7 @@ label characters:
     # BAD ENDING
     label ending_bad:
         scene bg bad ending
-        "Unfortunately, this date didn't go as well as you hoped... But that's ok! Keep trying!"
+        "BFF" "Unfortunately, this date didn't go as well as you hoped... But that's ok! Keep trying!"
         menu:
             "Start again":
                 jump start
